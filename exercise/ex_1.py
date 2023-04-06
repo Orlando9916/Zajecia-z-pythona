@@ -1,10 +1,10 @@
-def hello(a: str) -> str:
+def hello(a: str) ->    str:
     # TODO
     return "Hello"
 
 
-print("Example")
-print(hello("Ola"))
+    print("Example")
+    print(hello("Ola"))
 
 assert hello("Ola") == "Hello Ola"
 assert hello("Zuzia") == "Hello Zuzia"
