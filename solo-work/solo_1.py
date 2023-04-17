@@ -1,13 +1,11 @@
-# zadanie 1.8
+# zadanie 1.9
 
-# posortuj alfabetycznie (od nazwiska) studentow
+# policz wszystkich studentow z tablicy, ktorych nazwisko zaczyna sie na N
 studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
-studenci.sort(key=lambda x: x.split()[1])
-# oczekiwany rezultat:
-# Barbara Kowalska
-# Jan Niezbedny
-# Tomasz Nijaki
-# Anna Szczesny
-print("Alfabetyczna lista studentow wynosi: ")
+
+liczba_n = 0
 for student in studenci:
-    print(student)
+    if student.split()[1].startswith('N'):
+        liczba_n += 1
+
+print("Liczba studentow na N wynosi:", liczba_n)
