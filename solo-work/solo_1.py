@@ -5,10 +5,4 @@ student = "Ola"
 
 # oczekiwany rezultat: Hello Ola
 # wykorzystaj w princie zmienne hello i student
-print("{} {}" .format ('Hello', 'Ola'))
-# zadanie 1.2
-
-student = input("Wpisz swoje imie")
-
-print("Hello " + student)
-
+print("{h} {s}" .format (h=hello, s=student))
