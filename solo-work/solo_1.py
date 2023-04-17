@@ -1,10 +1,10 @@
-# zadanie 1.5
+# zadanie 1.6
 
-liczba = 3
-potega = 4
+# policz ilosc nawiasow ( w danym ciagu znakow
 
-wynik = liczba**potega
+ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
+liczba_nawiasow_otwierajacych = ciag_znakow.count("(")
 
 # oczekiwany rezultat:
-# Wynik wynosi: 81
-print("Wynik wynosi: ", wynik)
+# Liczba nawiasow otwierajacych wynosi: 4
+print("Liczba nawiasow otwierajacych wynosi: " + str(liczba_nawiasow_otwierajacych))
