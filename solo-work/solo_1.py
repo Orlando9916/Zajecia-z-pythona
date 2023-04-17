@@ -1,8 +1,14 @@
-# zadanie 1.3
+# zadanie 1.4
 
-studenci = ["Ania", "Kuba", "Piotr", "Jan"]
+studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
 
-# policz liczbe studentow w tablicy studenci 
-# oczekiwany rezultat: Liczba studentow wynosi: 4
-liczba_studentow = len(studenci)
-print("Liczba studentow wynosi: ", liczba_studentow)
+for x in studenci:
+    print("Hello ",x)
+# za pomoca petli i print przywitaj sie z kazdym studentem
+# z tabeli studenci osobno
+# oczekiwany rezultat:
+# Hello Ania
+# Hello Kasia
+# Hello Piotr
+# Hello Tomek
+
