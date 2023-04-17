@@ -17,8 +17,9 @@ def kwadrat(bok):
 
 
 def prostokat(bok_a, bok_b):
-    # TODO
-    return 0, 0
+    pole = bok_a * bok_b
+    obwod = 2 * bok_a + 2 * bok_b
+    return obwod, pole
 
 # rownoleglobok i romb dla studenta 2
 def rownoleglobok(bok_a, bok_b, wysokosc_a):
