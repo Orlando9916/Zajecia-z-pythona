@@ -1,14 +1,10 @@
-# zadanie 1.4
+# zadanie 1.5
 
-studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
+liczba = 3
+potega = 4
 
-for x in studenci:
-    print("Hello ",x)
-# za pomoca petli i print przywitaj sie z kazdym studentem
-# z tabeli studenci osobno
+wynik = liczba**potega
+
 # oczekiwany rezultat:
-# Hello Ania
-# Hello Kasia
-# Hello Piotr
-# Hello Tomek
-
+# Wynik wynosi: 81
+print("Wynik wynosi: ", wynik)
