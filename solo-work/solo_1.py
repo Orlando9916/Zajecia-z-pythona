@@ -1,8 +1,8 @@
-# zadanie 1.1
+# zadanie 1.3
 
-hello = "Hello"
-student = "Ola"
+studenci = ["Ania", "Kuba", "Piotr", "Jan"]
 
-# oczekiwany rezultat: Hello Ola
-# wykorzystaj w princie zmienne hello i student
-print("{h} {s}" .format (h=hello, s=student))
+# policz liczbe studentow w tablicy studenci 
+# oczekiwany rezultat: Liczba studentow wynosi: 4
+liczba_studentow = len(studenci)
+print("Liczba studentow wynosi: ", liczba_studentow)
