@@ -1,10 +1,14 @@
-# zadanie 1.6
+# zadanie 1.7
 
-# policz ilosc nawiasow ( w danym ciagu znakow
-
-ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
-liczba_nawiasow_otwierajacych = ciag_znakow.count("(")
-
+# posortuj alfabetycznie (od imienia) studentow
+studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
+lista= studenci.sort()
 # oczekiwany rezultat:
-# Liczba nawiasow otwierajacych wynosi: 4
-print("Liczba nawiasow otwierajacych wynosi: " + str(liczba_nawiasow_otwierajacych))
+# Anna Szczesny
+# Barbara Kowalska
+# Jan Niezbedny
+# Tomasz Nijaki
+print("Alfabetyczna lista studentow wynosi: ")
+for student in studenci:
+    print(student)
+
