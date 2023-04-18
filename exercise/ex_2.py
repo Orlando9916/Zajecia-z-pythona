@@ -23,3 +23,13 @@ r = 2
 obwod = 2 * π * r
 pole = π * r ** 2
 print("Obwód koła wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
+
+#równoległobok
+a = 3
+b = 4
+h = 6
+obwod = 2 * a + 2 * b
+pole = a * h
+print("Obwód równoległoboku wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
+
+
