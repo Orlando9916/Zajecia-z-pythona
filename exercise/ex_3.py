@@ -29,13 +29,13 @@ def rownoleglobok(bok_a, bok_b, wysokosc_a):
     return pole , obwod
 
 def deltoid(bok_a, bok_b wysokosc):
-    # TODO
-    return 0, 0
+    obwod = 2 * bok_a + 2 * bok_b
+    pole = ( przekatna_c * przekatna_d) / 2
+    return obwod, pole
 
 # trapez i kolo dla studenta 3
-def trapez(bok_a, bok_b, bok_c, bok_d, wysokosc_a):
-    # TODO
-    return 0, 0
+def trapez(bok_a, bok_b, bok_c, bok_d, wysokosc_a, przekatna_c, przekatna_d):
+
 
 
 def kolo(promien):
