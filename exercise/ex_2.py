@@ -17,4 +17,9 @@ obwod = 2 * a + 2 * b
 pole = a * b
 print("Obwód prostokątu wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
 
-
+# kolo
+r = 2
+π = 3.14
+obwod = 2 * π * r
+pole = π * r ** 2
+print("Obwód koła wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
