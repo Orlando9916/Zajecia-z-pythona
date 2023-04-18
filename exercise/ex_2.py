@@ -32,4 +32,11 @@ obwod = 2 * a + 2 * b
 pole = a * h
 print("Obwód równoległoboku wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
 
-
+#deltoid
+a = 4
+b = 5
+c1 = 6
+c2 = 7
+obwod = 2 * a + 2 * b
+pole = (c1 * c2)  / 2
+print("Obwód deltoidu wynosi " + str(obwod) + ", zas pole wynosi " + str(pole) + ".")
