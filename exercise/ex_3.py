@@ -22,12 +22,13 @@ def prostokat(bok_a, bok_b):
     obwod = 2 * bok_a + 2 * bok_b
     return obwod, pole
 
-# rownoleglobok i romb dla studenta 2
+# rownoleglobok i deltoid dla studenta 2
 def rownoleglobok(bok_a, bok_b, wysokosc_a):
-    # TODO
-    return 0, 0
+    pole = bok_a * wysokosc_a
+    obwod = 2 * bok_a + 2 * bok_b
+    return pole , obwod
 
-def romb(bok, wysokosc):
+def deltoid(bok_a, bok_b wysokosc):
     # TODO
     return 0, 0
 
