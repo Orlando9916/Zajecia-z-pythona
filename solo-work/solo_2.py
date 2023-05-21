@@ -61,31 +61,138 @@ student_krzysztof.dodaj_ocene(5)
 print(student_krzysztof)
 
 class Rower:
-    def __init__(self, marka, przeznaczenie):
+    def __init__(self, marka, przeznaczenie, rodzaj_opon, rozmiar, material, amortyzacja, przerzutki, hamulce):
         self.marka = marka
-  #      self.rodzaj_opon = rodzaj_opon
-  #      self.rozmiar = rozmiar
         self.przeznaczenie = przeznaczenie
- #       self.kolor = kolor
- #       self.waga = waga
- #       self.klasa = klasa
-#        self.dodatki = dodatki
-#       self.cena = 0
+        self.rodzaj_opon = rodzaj_opon
+        self.rozmiar = rozmiar
+        self.material = material
+        self.amortyzacja = amortyzacja
+        self.przerzutki = przerzutki
+        self.hamulce = hamulce
+
     def obliczanie_ceny(self):
         cena = 0
-        if self.marka =="x":
+        if self.marka == "cross":
             cena += 1000
-        elif self.marka =="y":
+        elif self.marka == "giant":
             cena += 700
-        elif self.marka =="z":
+        elif self.marka == "decathlon":
             cena += 500
-        
-        if self.przeznaczenie =="szosowy":
+
+        if self.przeznaczenie == "szosowy":
+            cena += 300
+        elif self.przeznaczenie == "gorski":
+            cena += 200
+        elif self.przeznaczenie == "miejski":
             cena += 100
-        
-        print(cena)
+
+        if self.rodzaj_opon == "szosowe":
+            cena += 300
+        elif self.rodzaj_opon == "gorskie":
+            cena += 200
+        elif self.rodzaj_opon == "miejskie":
+            cena += 100
+
+        if self.rozmiar == "niemowlęce":
+            cena += 100
+        elif self.rozmiar == "młodziezowe":
+            cena += 200
+        elif self.rozmiar == "dorosle":
+            cena += 500
+
+        if self.material == "carbon":
+            cena += 1000
+        elif self.material == "stal":
+            cena += 500
+        elif self.material == "aluminium":
+            cena += 700
+
+        if self.amortyzacja == "bdb":
+            cena += 500
+        elif self.amortyzacja == "db":
+            cena += 350
+        elif self.amortyzacja == "dst":
+            cena += 200
+
+        if self.przerzutki == "12":
+            cena += 500
+        elif self.przerzutki == "9":
+            cena += 300
+        elif self.przerzutki == "7":
+            cena += 200
+
+        if self.hamulce == "tarczowe":
+            cena += 800
+        elif self.hamulce == "hydrauliczne":
+            cena += 600
+        elif self.hamulce == "rolkowe":
+            cena += 400
+
+        return cena
+
+    def v_max(self):
+        predkosc = 0
+        if self.marka == "cross":
+            predkosc += 10
+        elif self.marka == "giant":
+            predkosc += 7
+        elif self.marka == "decathlon":
+            predkosc += 5
+
+        if self.przeznaczenie == "szosowy":
+            predkosc += 3
+        elif self.przeznaczenie == "gorski":
+            predkosc += 1
+        elif self.przeznaczenie == "miejski":
+            predkosc += 2
+
+        if self.rodzaj_opon == "szosowe":
+            predkosc -= 3
+        elif self.rodzaj_opon == "gorskie":
+            predkosc += 1
+        elif self.rodzaj_opon == "miejskie":
+            predkosc += 2
+
+        if self.rozmiar == "niemowlęce":
+            predkosc += 4
+        elif self.rozmiar == "młodziezowe":
+            predkosc += 3
+        elif self.rozmiar == "dorosle":
+            predkosc += 2
+
+        if self.material == "carbon":
+            predkosc += 10
+        elif self.material == "stal":
+            predkosc += 5
+        elif self.material == "aluminium":
+            predkosc += 7
+
+        if self.amortyzacja == "bdb":
+            predkosc += 5
+        elif self.amortyzacja == "db":
+            predkosc += 3
+        elif self.amortyzacja == "dst":
+            predkosc += 2
+
+        if self.przerzutki == "12":
+            predkosc += 4
+        elif self.przerzutki == "9":
+            predkosc += 3
+        elif self.przerzutki == "7":
+            predkosc += 2
+
+        if self.hamulce == "tarczowe":
+            predkosc += 8
+        elif self.hamulce == "hydrauliczne":
+            predkosc += 6
+        elif self.hamulce == "rolkowe":
+            predkosc += 4
+
+        return predkosc
 
 
-rower = Rower("x", "szosowy") 
-rower.obliczanie_ceny()       
+rower1 = Rower("cross", "szosowy", "szosowe", "dorosle", "stal", "bdb", "9", "rolkowe")
+print(rower1.obliczanie_ceny())
+print(rower1.v_max()) 
 
