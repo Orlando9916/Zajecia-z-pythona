@@ -15,7 +15,7 @@ def suma_listy(list):
     elif  len (list) > 0:
         first_element = list[0]
         list.pop(0)
-        return first_element + suma_listy (list)
+        return first_element + suma_listy(list) # first_element + suma_listy(list[1:])
 list1 = [1,2,4]
 print (suma_listy(list1))
 
@@ -25,3 +25,5 @@ print (suma_listy(list1))
 #3. podajemy iż liczba n jest z przedziału od 100 do 1
 #4. Program oblicza wartośc funkcjji, mnożąc podaną wartośc i mnożąc ją przez kolejne różnice wartości podanej przez kolejno wartość (n-1)*(n-2),
 #  aż dojdziemy do wartości kiedy będziemy mnożyć przez 1, wtedy program się zatrzymuje i pokazuje iloczyn podanej przez nas liczby
+#funckja find.max
+#małe sudoku
