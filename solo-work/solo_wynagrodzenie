@@ -1,0 +1,32 @@
+import csv
+with open ("salary.csv", 'r') as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count ==0:
+            print(f'Nazwy kolumn to: {", ".join(row)}')
+            line_count += 1
+        else:
+            print(f'\t {row[0]} o nazwisku {row[1]} zarabia {row[2]} ')
+            line_count += 1
+class Pracownik:
+    def  __init__(self, imie, nazwisko, wynagrodzenie):
+        self.imie =imie
+        self.nazwisko = nazwisko
+        self.wynagrodzenie_brutto = wynagrodzenie
+
+    def __str__(self):
+        pass
+
+    def oblicz_netto(self):
+
+        return self.wynagrodzenie_brutto*0.66
+
+    def oblicz_koszty(self):
+        return 0
+
+
+
+
+
+        
