@@ -1,0 +1,27 @@
+#1- find_max
+# Funkcja suma_listy
+# Czy lista jest pusta?
+# Jeśli tak zwróc zero
+# Jeśli nie, zapisz pierwszy element jako najwiekszy i sprawdź czy kolejny element jest wiekszy od poprzedniego
+# Jesli tak nadpisz najwieksza wartosc, jesli nie przejdz do kolejnej liczby i powtarzaj powyzsza czynnosc az do momentu kiedy lista będzie pusta
+
+def find_max(lista):
+    if len(lista) == 0:
+        return None
+
+    def sprawdz_elementy(lista, max_wartosc):
+        if len(lista) == 0:
+            return max_wartosc
+
+        aktualna_wartosc = lista[0]
+        if aktualna_wartosc > max_wartosc:
+            max_wartosc = aktualna_wartosc
+
+        return sprawdz_elementy(lista[1:], max_wartosc)
+
+    return sprawdz_elementy(lista[1:], lista[0])
+
+moja_lista = [5, 10, 15, 8, 20]
+maks_wartosc = find_max(moja_lista)
+print("Maksymalna wartość w liście:", maks_wartosc)
+
