@@ -34,7 +34,7 @@ print("Maksymalna wartość w liście:", maks_wartosc)
 def sum_of_list(lst):
     if not lst:  
         return 0
-
+    
     first_element = lst[0]  
     remaining_list = lst[1:]  
 
@@ -42,5 +42,20 @@ def sum_of_list(lst):
 
 my_list = [1, 6, 3, 4, 5]
 result = sum_of_list(my_list)
-print("Suma wartości w liście:", result)  
+print("Suma wartości w liście:", result) 
+ 
+# 3- n_silnia
+# funkcja n_silnia
+# Jeśli liczba jest mniejsza bądź równa 1, zwróć 1
+# Jeśli nie, zwróć liczba * silnia(liczba - 1)
+def silnia(liczba):
+    if liczba <= 1:
+        return 1
+    else:
+        return liczba * silnia(liczba - 1)
+
+num = 6
+result = silnia(num)
+print(f"Silnia liczby {num} wynosi: {result}")
+
 
