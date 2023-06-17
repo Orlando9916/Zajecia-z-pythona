@@ -1,29 +1,32 @@
-import csv
-with open ("salary.csv", 'r') as csv_file:
-    csv_reader = csv.reader(csv_file, delimiter=',')
-    line_count = 0
-    for row in csv_reader:
-        if line_count ==0:
-            print(f'Nazwy kolumn to: {", ".join(row)}')
-            line_count += 1
-        else:
-            print(f'\t {row[0]} o nazwisku {row[1]} zarabia {row[2]} ')
-            line_count += 1
+import pandas as pd
+
 class Pracownik:
-    def  __init__(self, imie, nazwisko, wynagrodzenie):
-        self.imie =imie
+    def __init__(self, imie, nazwisko, wynagrodzenie_brutto):
+        self.imie = imie
         self.nazwisko = nazwisko
-        self.wynagrodzenie_brutto = wynagrodzenie
+        self.wynagrodzenie_brutto = float(wynagrodzenie_brutto)
 
-    def __str__(self):
-        pass
+    def wynagrodzenie_netto(self):
+        ubezpieczenie_spoleczne = self.wynagrodzenie_brutto * 0.1371
+        ubezpieczenie_zdrowotne = self.wynagrodzenie_brutto * 0.09
+        podstawa_podatku = self.wynagrodzenie_brutto - ubezpieczenie_spoleczne - ubezpieczenie_zdrowotne
+        podatek = podstawa_podatku * 0.18 - ubezpieczenie_zdrowotne
+        wynagrodzenie_netto=self.wynagrodzenie_brutto - ubezpieczenie_spoleczne - podatek
+        return wynagrodzenie_netto
+        
 
-    def oblicz_netto(self):
+    def calkowity_koszt(self):
+        koszt_pracodawcy = self.wynagrodzenie_brutto * 0.2048
+        return self.wynagrodzenie_brutto + koszt_pracodawcy
 
-        return self.wynagrodzenie_brutto*0.66
+df = pd.read_csv('pracownicy.csv')
+calkowity_koszt = 0
+for index, row in df.iterrows():
+    pracownik = Pracownik(row['imie'], row['nazwisko'], row['wynagrodzenie_brutto'])
+    calkowity_koszt += pracownik.calkowity_koszt()
+    print(pracownik.imie, pracownik.nazwisko, "Wynagrodzenie netto wynosi: ", pracownik.wynagrodzenie_netto())
 
-    def oblicz_koszty(self):
-        return 0
+print("Całkowity koszt pracodawcy wynosi: ", calkowity_koszt)
 
 
 
